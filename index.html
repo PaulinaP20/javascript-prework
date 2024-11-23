@@ -6,15 +6,24 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<h1> KAMIEŃ PAPIER NOŻYCE</h1>
+	<h2>Cel gry: Celem gry jest wybranie jednej z trzech opcji (kamień, papier, nożyce) i pokonanie przeciwnika. Gra toczy się na zasadzie "kamień bije nożyce, nożyce tną papier, papier owija kamień". Gracz rywalizuje z komputerem, wybierając swój ruch, a komputer losuje swój ruch automatycznie.</h2>
 	<div class="container">
 		<div id="buttons">
-            <button id="button-rock">Kamień</button>
-            <button id="button-paper">Papier</button>
-            <button id="button-scissors">Nożyce</button>
+            <button type="button" id="button-rock">Kamień</button>
+            <button type="button" id="button-paper">Papier</button>
+            <button type="button" id="button-scissors">Nożyce</button>
         </div>
-		<div id="messages">
+	</div>
+	
+	<div class="score-container">
+		<h2>Wynik rundy: </h2>
+		<div id="messages"></div>
+	</div>
 
-        </div>
+	<div class="counter">
+		<h2>Licznik punktów: </h2>
+		<p id="score-display">0-0</p>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
