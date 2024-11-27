@@ -63,7 +63,7 @@ function buttonClicked(argButtonName) {
     console.log('ruch gracza to: '+ playerMove);
     const randomNumber=Math.floor(Math.random()*3+1);
     console.log('Wylosowana liczba to: '+ randomNumber)
-    computerMove=(getMoveName(randomNumber));
+    const computerMove=(getMoveName(randomNumber));
     console.log('ruch komputera to: '+ computerMove);
     
     displayResult(playerMove, computerMove);
