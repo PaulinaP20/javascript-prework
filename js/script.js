@@ -4,15 +4,13 @@ let playerScore=0
 
 let computerScore=0
 
-var argButtonName, buttonScissors;
-
 const buttonRock=document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){buttonClicked('kamien')});
 
 const buttonPaper=document.getElementById('button-paper');
 buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
 
-buttonScissors=document.getElementById('button-scissors');
+const buttonScissors=document.getElementById('button-scissors');
 buttonScissors.addEventListener('click', function(){buttonClicked('nozyce')});
 
 function buttonClicked(argButtonName) {
@@ -61,7 +59,7 @@ function buttonClicked(argButtonName) {
     }
     
    
-    playerMove = argButtonName
+    let playerMove = argButtonName
     console.log('ruch gracza to: '+ playerMove);
     randomNumber=Math.floor(Math.random()*3+1);
     console.log('Wylosowana liczba to: '+ randomNumber)
