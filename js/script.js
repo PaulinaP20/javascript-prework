@@ -4,12 +4,12 @@ let playerScore=0
 
 let computerScore=0
 
-var argButtonName, buttonPaper, buttonScissors;
+var argButtonName, buttonScissors;
 
 const buttonRock=document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){buttonClicked('kamien')});
 
-buttonPaper=document.getElementById('button-paper');
+const buttonPaper=document.getElementById('button-paper');
 buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
 
 buttonScissors=document.getElementById('button-scissors');
