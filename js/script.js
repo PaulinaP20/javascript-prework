@@ -1,9 +1,19 @@
 
 
-let playerScore=0
+let playerScore=0 
+
 let computerScore=0
 
-var argButtonName, buttonRock, buttonPaper, buttonScissors;
+var argButtonName, buttonPaper, buttonScissors;
+
+const buttonRock=document.getElementById('button-rock');
+buttonRock.addEventListener('click', function(){buttonClicked('kamien')});
+
+buttonPaper=document.getElementById('button-paper');
+buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
+
+buttonScissors=document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){buttonClicked('nozyce')});
 
 function buttonClicked(argButtonName) {
     clearMessages();
@@ -25,7 +35,6 @@ function buttonClicked(argButtonName) {
             return 'kamien'
         }
     }
-    
     
     function displayResult (argPlayerMove, argComputerMove) {
         console.log ('wywolano funckcje displayResult z argumentami:' + argPlayerMove + ',' + argComputerMove)
@@ -62,11 +71,3 @@ function buttonClicked(argButtonName) {
     displayResult(playerMove, computerMove);
 };
 
-buttonRock=document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){buttonClicked('kamien')});
-
-buttonPaper=document.getElementById('button-paper');
-buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
-
-buttonScissors=document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){buttonClicked('nozyce')});
