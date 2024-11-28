@@ -13,9 +13,9 @@ buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
 const buttonScissors=document.getElementById('button-scissors');
 buttonScissors.addEventListener('click', function(){buttonClicked('nozyce')});
 
-function buttonClicked(argButtonName) {
+function buttonClicked(playerMove) {
     clearMessages();
-    console.log(argButtonName+' został kliknięty!');
+    console.log(playerMove +' został kliknięty!');
     
     function getMoveName (argMoveId) {
         console.log('wywolano funkcje getMoveName z argumentem '+ argMoveId);
@@ -58,8 +58,6 @@ function buttonClicked(argButtonName) {
     
     }
     
-   
-    let playerMove = argButtonName
     console.log('ruch gracza to: '+ playerMove);
     const randomNumber=Math.floor(Math.random()*3+1);
     console.log('Wylosowana liczba to: '+ randomNumber)
