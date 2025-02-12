@@ -1,22 +1,15 @@
-
+{
 let playerScore=0
 
 let computerScore=0
 
 const buttonRock=document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){buttonClicked('kamien')});
 
 const buttonPaper=document.getElementById('button-paper');
-buttonPaper.addEventListener('click', function(){buttonClicked('papier')});
 
 const buttonScissors=document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){buttonClicked('nozyce')});
 
-function buttonClicked(playerMove) {
-    clearMessages();
-    console.log(playerMove +' został kliknięty!(ruch gracza)');
-
-    function getMoveName (argMoveId) {
+    const getMoveName = (argMoveId) => {
         //console.log('wywolano funkcje getMoveName z argumentem '+ argMoveId);
         if (argMoveId=='1') {
             return 'kamien';
@@ -33,7 +26,7 @@ function buttonClicked(playerMove) {
         }
     }
 
-    function displayResult (argPlayerMove, argComputerMove) {
+    const displayResult= (argPlayerMove, argComputerMove) => {
         //console.log ('wywolano funckcje displayResult z argumentami:' + argPlayerMove + ',' + argComputerMove)
         if (argPlayerMove =='papier' && argComputerMove=='kamien') {
             printMessage('Wygrywasz!');
@@ -55,12 +48,25 @@ function buttonClicked(playerMove) {
 
         printMessage('Zagrałem ' + argComputerMove + ' a Ty ' + argPlayerMove);
 
-    }
-    const randomNumber=Math.floor(Math.random()*3+1);
-    console.log('Wylosowana liczba to: '+ randomNumber)
-    const computerMove=(getMoveName(randomNumber));
-    console.log('ruch komputera to: '+ computerMove);
+    };
 
-    displayResult(playerMove, computerMove);
-};
+    const buttonClicked = (playerMove) => {
+        clearMessages();
+        console.log(playerMove +' został kliknięty!(ruch gracza)');
+
+        const randomNumber=Math.floor(Math.random()*3+1);
+        console.log('Wylosowana liczba to: '+ randomNumber)
+        const computerMove=(getMoveName(randomNumber));
+        console.log('ruch komputera to: '+ computerMove);
+
+        displayResult(playerMove, computerMove);
+    };
+
+    buttonRock.addEventListener('click',() =>{buttonClicked('kamien')});
+
+    buttonPaper.addEventListener('click', () =>{buttonClicked('papier')});
+
+    buttonScissors.addEventListener('click', () =>{buttonClicked('nozyce')});
+
+}
 
