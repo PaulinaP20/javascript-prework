@@ -1,13 +1,10 @@
 {
-let playerScore=0
+    let playerScore=0
+    let computerScore=0
 
-let computerScore=0
-
-const buttonRock=document.getElementById('button-rock');
-
-const buttonPaper=document.getElementById('button-paper');
-
-const buttonScissors=document.getElementById('button-scissors');
+    const buttonRock=document.getElementById('button-rock');
+    const buttonPaper=document.getElementById('button-paper');
+    const buttonScissors=document.getElementById('button-scissors');
 
     const getMoveName = (argMoveId) => {
         //console.log('wywolano funkcje getMoveName z argumentem '+ argMoveId);
@@ -21,9 +18,9 @@ const buttonScissors=document.getElementById('button-scissors');
                 return 'nozyce';
             }
             else {
-            printMessage ('Nie znam ruchu o id ' + argMoveId+' Zakładam, że chodziło ci o kamien')
+            printMessage ('Nie znam ruchu o id ' + argMoveId +' Zakładam, że chodziło ci o kamien')
             return 'kamien'
-        }
+            };
     }
 
     const displayResult= (argPlayerMove, argComputerMove) => {
@@ -44,6 +41,7 @@ const buttonScissors=document.getElementById('button-scissors');
             printMessage('Przegrywasz :(');
             computerScore++
         }
+
         document.getElementById('score-display').textContent=`${playerScore}-${computerScore}`
 
         printMessage('Zagrałem ' + argComputerMove + ' a Ty ' + argPlayerMove);
