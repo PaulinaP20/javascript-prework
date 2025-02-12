@@ -60,11 +60,8 @@
         displayResult(playerMove, computerMove);
     };
 
-    buttonRock.addEventListener('click',() =>{buttonClicked('kamien')});
-
-    buttonPaper.addEventListener('click', () =>{buttonClicked('papier')});
-
-    buttonScissors.addEventListener('click', () =>{buttonClicked('nozyce')});
-
+    buttonRock.addEventListener('click',() =>buttonClicked('kamien'));
+    buttonPaper.addEventListener('click', () =>buttonClicked('papier'));
+    buttonScissors.addEventListener('click', () =>buttonClicked('nozyce'));
 }
 
